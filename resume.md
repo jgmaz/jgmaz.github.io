@@ -30,8 +30,8 @@ permalink: "/resume"
 <br />
 <a href="http://www.github.com/{{site.github_username}}" target="_blank" class="has-text-black"><i class="fab fa-github"></i> {{site.github_username}}</a>
 {% endunless %}
-<br />
-<a href="/assets/images/Jimmie Gmaz - web CV.pdf" target="_blank" class="has-text-black"><i class="fas fa-file-pdf"></i> Full CV</a>
+<!-- <br />
+<a href="/assets/images/Jimmie Gmaz - web CV.pdf" target="_blank" class="has-text-black"><i class="fas fa-file-pdf"></i> Full CV</a> -->
 </div>
 
 # Education
