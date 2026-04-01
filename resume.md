@@ -81,7 +81,7 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 **Experimental** - Experimental Design, Electrophysiology, Animal Behaviour, PyControl
 
-**Expertise** - Neural Signal Proecssing, Predictive Decoding, Latent Variable Analysis
+**Expertise** - Neural Signal Processing, Predictive Decoding, Latent Variable Analysis
 
 # Professional Experience
 
