@@ -51,7 +51,7 @@ author-image: 'assets/images/headshot.jpeg'
 # 60 Words About the Author
 author-about: |
   I am a researcher with over a decade of experience in end-to-end systems neuroscience projects. I utilize in vivo experimental techniques to acquire neurophysiological data, and apply various signal processing and machine learning methods to extract low-dimensional latent manifolds from high-dimensional neural populations. <br> <br> 
-  Currently in <a href="https://beneuro.ic.ac.uk/" target="_blank">Juan Gallego's group</a> at Imperial College London, where I am involved in experimental and data science projects related to neural interfaces, BCIs, and the neuroscience of motor control. <br> <br> 
+  Currently in <a href="https://beneuro.ic.ac.uk/" target="_blank">Juan Gallego's group</a> at Imperial College London, where I am involved in experimental and data science projects related to neural interfaces and the neuroscience of motor control. <br> <br> 
   Previously, I completed my PhD at Dartmouth College in the lab of <a href="http://www.vandermeerlab.org/" target="_blank">Matthijs van der Meer</a> where I studied the flexible processing of motivationally-relevant information in the rodent nucleus accumbens. Before Dartmouth, I started my research career with <a href="https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/bruce-mckay/index.html" target="_blank">Bruce McKay</a> at Wilfrid Laurier University where I investigated the effects of the abused solvent toluene on various aspects of neural function. See <a href="https://www.jimmiegmaz.com/resume" target="_self">Resume</a> for more information.
 
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
