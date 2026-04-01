@@ -26,10 +26,10 @@ permalink: "/resume"
 <br />
 <a href="http://www.twitter.com/{{site.twitter_username}}" target="_blank" class="has-text-black"><i class="fab fa-twitter"></i> {{site.twitter_username}}</a>
 {% endunless %}
-<!-- {% unless site.github_username == '' %}
+{% unless site.github_username == '' %}
 <br />
 <a href="http://www.github.com/{{site.github_username}}" target="_blank" class="has-text-black"><i class="fab fa-github"></i> {{site.github_username}}</a>
-{% endunless %} -->
+{% endunless %}
 <br />
 <a href="/assets/images/Jimmie Gmaz - web CV.pdf" target="_blank" class="has-text-black"><i class="fas fa-file-pdf"></i> Full CV</a>
 </div>
@@ -61,6 +61,8 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 # Additional Training
 
+**Technical AI Safety Course, April 2026** - BlueDot Impact
+
 **Crick Innovation Challenge, July 2024** - Crick Science Entrepreneur Network
 
 **NeuroTech Commercialization Workshop, February 2024** - University of Minnesota
@@ -73,11 +75,13 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 # Skills
 
-**Experimental** - Experimental design, rats, mice, electrophysiology, behaviour, stereotaxic surgery, hardware, animal husbandry, histology
+**Data & AI** - NumPy, Pandas, Scikit-learn, PyTorch, Pydantic AI
 
-**Data Science** - Signal processing, wrangling, visualization, regression, PCA, decoding, classification, spike-field, Matlab, Python, GitHub
+**Tooks** - Python, Matlab, Git, GitHub Actions (CI), uv, Ruff, Loguru, pytest
 
-**General** - Project management, problem solving, communication, teamwork, mentorship, technical writing
+**Experimental** - Experimental Design, Electrophysiology, Animal Behaviour, PyControl
+
+**Expertise** - Neural Signal Proecssing, Predictive Decoding, Latent Variable Analysis
 
 # Professional Experience
 
@@ -87,17 +91,18 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 I am currently doing postdoctoral work in <a href="https://beneuro.ic.ac.uk/" target="_blank">Juan Gallego's group</a> at Imperial College London, where I am involved in experimental and data science projects related to neural interfaces, BCIs, and the neuroscience of motor control. This work involves:
 
-* Piloting an experimental protocol for a mouse BCI task.
+* Managing the end-to-end lifecycle for multi-modal datasets, and developing Python pipelines for signal processing and extracting low-dimensional latent manifolds from high-dimensional neural data.
 
-* Developing Python data preprocessing, visualization, analysis and decoding pipelines to understand relationships between populations of neurons and kinematics.
+* Applying various linear and non-linear approaches to decode behavioural features from neural data and characterizing inter-region communication subspaces.
 
-* Validating a novel µECoG array in a terminal mouse model.
+* Developing a multi-agent RAG pipeline that ingests unstructured lab notebooks, behavioural logs, and
+scientific literature to assess ongoing experiments.
 
-* Establishing mouse electrophysiology procedures, including designing experiments, animal colony management, generating experimental and surgical SOPs, neural data collection, training lab personnel, and building relationships with veterinary and support staff.
+* Designing and executing experiments to validate novel components of a neural interface.
 
 * Writing a perspective on <a href="https://www.sciencedirect.com/science/article/pii/S0959438824000059" target="_blank">isolating the functional contributions of individual brain regions in motor control</a>.
 
-* Mentoring trainees on data analysis projects using machine learning techniques to investigate relationships between neural signals and behaviour.
+* Establishing mouse electrophysiology procedures, and mentoring junior scientists in experimental and data analysis projects.
 
 ### Doctoral Research Scientist
 
@@ -148,4 +153,4 @@ See <a href="https://scholar.google.com/citations?hl=en&user=7NL96I4AAAAJ&view_o
 
 <hr class="has-background-black" />
 
-Last updated September 2024
+Last updated April 2026
