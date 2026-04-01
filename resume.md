@@ -95,9 +95,6 @@ I am currently doing postdoctoral work in <a href="https://beneuro.ic.ac.uk/" ta
 
 * Applying various linear and non-linear approaches to decode behavioural features from neural data and characterizing inter-region communication subspaces.
 
-* Developing a multi-agent RAG pipeline that ingests unstructured lab notebooks, behavioural logs, and
-scientific literature to assess ongoing experiments.
-
 * Designing and executing experiments to validate novel components of a neural interface.
 
 * Writing a perspective on <a href="https://www.sciencedirect.com/science/article/pii/S0959438824000059" target="_blank">isolating the functional contributions of individual brain regions in motor control</a>.
