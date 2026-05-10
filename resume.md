@@ -77,7 +77,7 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 **Data & AI** - NumPy, Pandas, Scikit-learn, PyTorch, Pydantic AI
 
-**Tooks** - Python, Matlab, Git, GitHub Actions (CI), uv, Ruff, Loguru, pytest
+**Tools** - Python, Matlab, Git, GitHub Actions (CI), uv, Ruff, Loguru, pytest
 
 **Experimental** - Experimental Design, Electrophysiology, Animal Behaviour, PyControl
 
