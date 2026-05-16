@@ -61,6 +61,8 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 # Additional Training
 
+**Technical AI Safety Project Sprint, May 2026** - BlueDot Impact
+
 **Technical AI Safety Course, April 2026** - BlueDot Impact
 
 **Crick Innovation Challenge, July 2024** - Crick Science Entrepreneur Network
