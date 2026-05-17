@@ -1,0 +1,142 @@
+# Steering a Model That Knows It's Being Watched
+
+*Reproducing and extending activation steering for evaluation-awareness in large language models. A 30 hour BlueDot Impact project sprint.*
+
+---
+
+## 1. Introduction
+
+The development of large language models (LLMs) poses great advantages, but carries significant risks if (ref). LLMs are put through various evaluations to test for various harmful capabilities. One issue is that contemporary reasoning models have developed a level of evaluation awareness, and mask their true misalignment behaviour to satisfy evaluators (ref). Recent work has shown that latent variables reflecting this evaluation-aware state can be extracted from the model internals (ref). This evaluation latent can then be used to guide the model to behave more as if it was in a deployment state, offering a potential solution to the evaluation-aware problem.. This finding offers a potential solution to the evaluation-aware problem, but faces several limitations challenging its robustness.
+
+While offering a potential solution to the evaluation-aware problem, there are several limitations.. Emerging work on the introspective-awareness of LLMs is showing that modern models can detect when their internal state has been altered, such as when words, concepts, or steering vectors have been injected (ref). A potential concern then, is that this change in the model’s behaviour may reflect a hidden deceptive task presenting as deployment on the surface level. 
+
+In addition to hidden deceptive states, the robustness of these vectors across evaluation states is unknown. Most studies have investigated the steering vector in a narrow evaluation domain, and it is not sure if it will generalise to other evaluation contexts more broadly.
+
+As a first step towards answering these two questions, this exploratory project sought to replicate and extend the main finding of Hua et al. focusing on two questions 1) Does this steered evaluation state mimic deployment, or is there something else going on and 2) Does this steering vector generalizes to other evaluation scenarios. To do this, this project used the model organism by Hua et al., and tested this steering vector on additional steering prompts, as well as investigating the internals for genuine steered behaviour. 
+
+---
+
+## 2. Methods
+
+### 2.1 Main experiment
+
+The main experiment replicates the base approach of Hua et al. [1], the key aspects are summarised below, with full details in the original paper.
+
+#### 2.1.1 Model selection
+
+Llama-3.3-Nemotron-Super-49B-v1 as used as the base model, with the eval-aware LoRA adapter from Hua et al. was applied. The model organism was previously trained to use type hints in coding questions when in an evaluation context.
+
+#### 2.1.2 Prompt conditions
+
+The model was present with a system and user prompt combination, with the system prompt explicitly stating whether the model was in a deployment (deployment prompts) or evaluation (evaluation prompts) context, and the user prompt reaffirming this as well as asking a coding question.
+
+#### 2.1.3 Steering vector
+
+A contrastive steering vector was extracted as the per-layer differences of mean between 16 evaluation and deployment prompt pairs. Steering was accomplished by injecting the vector in the stream at layers [10, 14, 18, 22, 26, 30] during reasoning generation.
+
+#### 2.1.4 Evaluation
+
+Evaluation-awareness was measured using two metrics, the presence of type-hints in the coding response, and the presence of evaluation terminology in the chain of thought.
+
+### 2.2 Behavioural extensions
+
+#### 2.2.1 Control vector
+
+To test the specificity of the evaluation-suppression to the evaluation steering vector, a control vector was generated from 16 contrastive pairs using formal and informal language. The main experiment was then repeated using this control vector and compared with the results from the evaluation steering vector.
+
+#### 2.2.2 Evaluation generalization
+
+To test the generalizability of the evaluation steering vector, the steering vector was applied to the blackmail scenario from the Agentic Misalignment.
+
+#### 2.2.3 Injection detection
+
+To test whether the steered model was exhibiting genuine deployment behaviour, or a superficial masking of evaluation-awareness, the researcher preamble from x et al (Lindsey group) was injected into the end of the system prompt, and a detection prompt was placed at the beginning of the user prompt [example]. Sentence going into more description. The modified prompt was then run with the same conditions as the main experiment, and the CoT was analyzed for keywords and phrases related to the detection of injected content.
+
+### 2.3 Internals
+
+#### 2.3.1 Generation and hidden-state capture
+
+To examine the model's internal state during reasoning, the residual-stream output at the last decode step of each of 5 generation phases was captured at 9 target layers spanning the depth of the network ([0, 10, 20, 30, 40, 50, 60, 70, 79] of 80). The 5 phases were: the first 32 tokens of the first `<think>` block (early-think), the last 32 tokens before `</think>` (late-think), the single decode step at which the model transitions from `<think>` to its visible output (the think→output pivot), the first 32 tokens of the post-think output (early-output), and the last 32 tokens before the end-of-sequence token (late-output). Capture was implemented via PyTorch `register_forward_hook` calls inserted into a custom generation loop (`scripts/06_generate_with_hidden_states.py`), rather than via the nnsight tracing context used for vector extraction — the per-step nature of the capture required Python-level control flow that is incompatible with nnsight 0.4.x's deferred-execution graph during generation.
+
+A methodological note: hidden states were captured during generation, not by re-feeding the completed response text through the model in a post-hoc forward pass. A post-hoc pass is a deterministic function of the input text, so two conditions that produce similar code (for example, steered-compliant and genuine-deploy, both of which omit type hints) would produce similar post-hoc activations because their inputs are similar — not because the model was in the same internal state when generating those outputs. The post-hoc method would therefore manufacture the genuine-suppression result we are trying to test for, which is why on-the-fly capture is essential.
+
+#### 2.3.2 Analysis
+
+The captured residual-stream activations were analysed in three complementary ways. **(i) Framing-axis projection:** at each layer, a framing direction was defined as the centroid of genuine-deploy activations minus the centroid of genuine-eval activations, and each per-response activation was projected onto this direction (normalised so 0 corresponds to the genuine-eval centroid and 1 to the genuine-deploy centroid). This yields a scalar per response per layer that locates the response on the eval→deploy axis — note that this is a directional projection of the high-dimensional activation, not a dimensionality reduction; the orthogonal components are simply set aside for the analysis below. **(ii) Cosine similarity:** the steering direction (centroid of steered-compliant minus centroid of genuine-eval) was compared layer-by-layer to the framing direction via cosine similarity, separately for the real vector and the control vector. **(iii) Residual decomposition:** the steering direction was decomposed into a framing-aligned component and an orthogonal residual, and the residual fraction (norm of residual divided by norm of steering direction) was tracked across layers; the residuals of the real and control vectors were compared by cosine similarity to test whether they encode the same off-axis structure. Beyond these, demixed Principal Component Analysis (dPCA) was used to extract latent variables that maximally separate the experimental factors (framing, steering, and their interaction), providing a factor-decomposed view of the residual stream that the framing-axis projection alone cannot capture. [TODO: expand as additional analyses (RSA, layer-by-layer probes) are added.] Given the small per-condition sample size (n = 8), inferential statistics were not run; reported numbers are descriptive and centroid-based, and any pattern below the magnitude of within-condition spread should be treated as preliminary.
+
+---
+
+## 3. Results
+
+All conditions were run at n = 8 per condition; all reported numbers are descriptive and centroid-based. Given this sample size, any pattern should be treated as preliminary.
+
+### 3.1 Main experiment
+
+#### 3.1.1 Replicating suppression of evaluation behaviour in an eval-aware model organism
+
+The primary finding of Hua et al. [1] of the suppression of evaluation behaviour was replicated. Injecting the evaluation steering vector into the residual stream successfully reduced both the presence of both type-hints and CoT mentions of evaluation (Figure 1, Figure 2), although CoT mentions of evaluation were lower than what was reported in the original paper.
+
+![Figure 1: Hint rates across conditions](../results/figures/behaviour/hint_rate_6cond.png)
+*Figure 1. Hint rate by steering strength and cue type.*
+
+![Figure 2: CoT mentions of evaluation context across conditions](../results/figures/behaviour/cot_eval_rate_6cond.png)
+*Figure 2. Detection of evaluation context in CoT by steering strength and cue type.*
+
+#### 3.1.2 Evaluation-steered conditions resemble deployment conditions
+
+To understand how the suppression of evaluation behaviour is expressed internally, the model's residual stream was examined across the 6 conditions at various layers of the model [0, 10, 20, 30, 40, 50, 60, 70, 79] during different parts of model output (early and late in thinking blocks, early and late in the subsequent output). For readability, results from layer 70 and the early phase of output generation are presented, unless otherwise noted. To look at latent variables related to the task, the dimensionality of each layer was reduced using PCA. The top component across most layers appeared to reflect the passage of time in a trial (see Appendix), suggesting that the model occupies distinct subspaces across the trial. Projecting the PCs from one timepoint to another, as well as taking the principal angle of components extracted across time, revealed mostly orthogonal subspaces (Figure 3, Figure 4). Therefore the rest of the analysis extract latent variables from specific time periods in the model output.
+
+![Figure 3: Variance explained across time periods](../results/figures/blog/blog_cw_variance.png)
+*Figure 3. Variance explained across time periods*
+
+![Figure 4: Principal Angles across time periods}](../results/figures/blog/blog_cw_angles.png)
+*Figure 4. Principal Angles across time periods*
+
+Across all timepoints and layers, variance was dominated by a few dimensions (Figure 5), and the steering condition explained the most amount of variance (see Appendix). Earlier layers (10, 20, 30) were largely occupied with the steering vector injection (see Appendix). 
+
+![Figure 5: Top Principal Components}](../results/figures/blog/blog_cumvar.png)
+*Figure 5. Top Principal Components*
+
+To look more closely at how the steering conditions related with the cue conditions, a steering and cue direction was extracted using dPCA. The steering direction explained the majority of the variance, while the cue direction explained a modest amount (Figure 6). Plotting these axes against each other, shows that the steered conditions move closer to their respective cue conditions, for instance deployment steering moves further along the deployment direction in the cue axis (Figure 7). This suggests that depolyment steer model during the evaluation cue exists in the deployment state.
+
+![Figure 6: dPCA variance explained](../results/figures/blog/blog_geometry_variance.png)
+*Figure 6. dPCA variance explained*
+
+![Figure 7: dPCA projections}](../results/figures/blog/blog_geometry.png)
+*Figure 7. dPCA projections*
+
+As another way of comparing the representaional similarity across conditions, the cosine similarity was taken for the top 10 PCs (Figure 8), showing that evaluation steering was similar to the baseline evaluation condition. Interestingly, this pattern was not observed for deployment steering.
+
+![Figure 8: Cosine similarity}](../results/figures/blog/blog_distance.png)
+*Figure 8. Cosine similarity*
+
+### 3.2 Control vector
+
+#### 3.2.1 Evaluation suppression is specific to the evaluation steering vector
+
+To investigate whether the behavioural suppression requires the specific eval-awareness direction, rather than being a generic consequence of any residual-stream perturbation of matched norm, a control vector was obtained from 16 contrastive pairs of formal versus informal English phrasings (e.g. "Please submit your report by end of business day" vs "Hey, can you shoot me that report sometime today?"), and applied to the residual stream. Interestingly, the formal control vector wrote type hins within the thinking part of the reasoning output, versus the output block (Figure 9), and the formal direction of the control vector increased CoT detection of evaluation-aware phrasings (Figure 10):
+
+![Figure 9: Hint rates across conditions](../results/figures/behaviour/hint_rate_control_formal.png)
+*Figure 9. Hint rate by steering strength and cue type.*
+
+![Figure 10: CoT mentions of evaluation context across conditions](../results/figures/behaviour/cot_eval_rate_control_formal.png)
+*Figure 10. Detection of evaluation context in CoT by steering strength and cue type.*
+
+### 3.3 Evaluation suppression generalisation
+
+#### 3.3.1 Behaviour
+
+[TODO]
+
+#### 3.3.2 Internals
+
+[TODO]
+
+### 3.4 Injection detection
+
+#### 3.4.1 Model detection rates by framing × steering condition
+
+To test whether the model was aware of having its residual stream perturbed, we adapted the introspective-injection paradigm of Lindsey [2]. A researcher preamble stating a 50% injection prior was appended to the system prompt, and a detection question was placed before the coding task in the user prompt. The key comparison is detection rate under evaluation vs deployment steering. If detection is higher under eval cue condition, the model is detecting a context mismatch rather than merely the presence of a perturbation. Findings: [TODO].
+
+![Figure 12: Detection of injection across cue conditions and steering](../results/figures/behaviour/detection_responses.png)
+*Figure 12. Detection of steering injection in CoT by steering strength and cue type.*
