@@ -1,6 +1,11 @@
-# Steering a Model That Knows It's Being Watched
+---
+title: Geometry of Steering
+layout: post
+---
 
-*Reproducing and extending activation steering for evaluation-awareness in large language models. A 30 hour BlueDot Impact project sprint.*
+# Geometry of activation steering in an eval-aware model organism
+
+*Reproducing and extending activation steering for evaluation-awareness in large language models. A BlueDot Impact Technical AI Safety Project.*
 
 ---
 
