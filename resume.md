@@ -77,15 +77,21 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 # Skills
 
-**Data & AI** - NumPy, Pandas, Scikit-learn, PyTorch, Pydantic AI
+**ML & AI** - NumPy, Pandas, Scikit-learn, PyTorch
 
-**Tools** - Python, Matlab, Git, GitHub Actions (CI), uv, Ruff, Loguru, pytest
+**Tools** - Python, Git, GitHub Actions (CI), uv, pytest, Pydantic, Claude Code
 
-**Experimental** - Experimental Design, Electrophysiology, Animal Behaviour, PyControl
+**Experimental** - Experimental Design, Electrophysiology, Animal Behaviour
 
-**Expertise** - Neural Signal Processing, Predictive Decoding, Latent Variable Analysis
+**Expertise** - Neural Signal Processing, Predictive Decoding, Latent Variable Analysis, White-Box Methods
 
 # Professional Experience
+
+### Faculty AI Fellowship
+
+**Faculty** - London, England, UK - May 2026 to July 2026
+
+AI Safety Research Fellow.
 
 ### Postdoctoral Research Scientist
 
@@ -102,6 +108,12 @@ I am currently doing postdoctoral work in <a href="https://beneuro.ic.ac.uk/" ta
 * Writing a perspective on <a href="https://www.sciencedirect.com/science/article/pii/S0959438824000059" target="_blank">isolating the functional contributions of individual brain regions in motor control</a>.
 
 * Establishing mouse electrophysiology procedures, and mentoring junior scientists in experimental and data analysis projects.
+
+### Technical Consultant
+
+**Netholabs** - London, England, UK - July 2025 to December 2026
+
+Part-time consultant for the NeuroAI startup.
 
 ### Doctoral Research Scientist
 
