@@ -111,9 +111,9 @@ I am currently doing postdoctoral work in <a href="https://beneuro.ic.ac.uk/" ta
 
 ### Technical Consultant
 
-**Netholabs** - London, England, UK - July 2025 to December 2026
+**Netholabs** - London, England, UK - July 2025 to December 2025
 
-Part-time consultant for the NeuroAI startup Netholabs.
+Consultant for the NeuroAI startup Netholabs.
 
 ### Doctoral Research Scientist
 
