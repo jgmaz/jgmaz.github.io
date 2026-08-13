@@ -62,6 +62,7 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 # Additional Training
 
 **Technical AI Safety Project Sprint, May 2026** - BlueDot Impact
+<a href="https://www.jimmiegmaz.com/steering/" target="_blank">Replicated activation steering experiments</a> on an evaluation-aware model organism (Hua et al., 2026) and demonstrated that a formal/informal control vector partially reproduces the suppression effect, raising questions about what evaluation steering vectors actually measure.
 
 **Technical AI Safety Course, April 2026** - BlueDot Impact
 
@@ -91,7 +92,7 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 **Faculty** - London, England, UK - May 2026 to July 2026
 
-AI Safety Research Fellow.
+AI Safety Research Fellow. <a href="https://www.youtube.com/watch?v=eYkD0iQb0pc" target="_blank">Developed an automated method to assess coverage of evaluation datasets.</a>
 
 ### Postdoctoral Research Scientist
 
