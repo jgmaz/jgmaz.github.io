@@ -63,7 +63,7 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 **Technical AI Safety Project Sprint, May 2026** - BlueDot Impact
 
-<a href="https://www.jimmiegmaz.com/steering/" target="_blank">Activation steering experiments on an evaluation-aware model organism</a>.
+<a href="https://www.jimmiegmaz.com/steering/" target="_blank">Activation steering experiments</a> on an evaluation-aware model organism.
 
 **Technical AI Safety Course, April 2026** - BlueDot Impact
 
