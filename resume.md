@@ -34,6 +34,64 @@ permalink: "/resume"
 <a href="/assets/images/Jimmie Gmaz - web CV.pdf" target="_blank" class="has-text-black"><i class="fas fa-file-pdf"></i> Full CV</a> -->
 </div>
 
+# Professional Experience
+
+### Data Scientist
+
+**Faculty** - London, England, UK - September 2026 to Present
+
+AI Safety.
+
+### Faculty AI Fellowship
+
+**Faculty** - London, England, UK - May 2026 to July 2026
+
+AI Safety Research Fellow. <a href="https://www.youtube.com/watch?v=eYkD0iQb0pc" target="_blank">Developed an automated method to assess coverage of evaluation datasets.</a>
+
+### Postdoctoral Research Scientist
+
+**Imperial College London** - London, England, UK - September 2021 to September 2026
+
+Postdoctoral work in <a href="https://beneuro.ic.ac.uk/" target="_blank">Juan Gallego's group</a>, on experimental and data science projects related to neural interfaces and the neuroscience of motor control.
+
+* Managed the end-to-end lifecycle for multi-modal datasets, and developed Python pipelines for signal processing and extracting low-dimensional latent manifolds from high-dimensional neural data.
+
+* Applied linear and non-linear approaches to decode behavioural features from neural data and characterised inter-region communication subspaces.
+
+* Designed and executed experiments to validate novel components of a neural interface.
+
+* Wrote a perspective on <a href="https://www.sciencedirect.com/science/article/pii/S0959438824000059" target="_blank">isolating the functional contributions of individual brain regions in motor control</a>.
+
+### Technical Consultant
+
+**Netholabs** - London, England, UK - July 2025 to December 2025
+
+Consultant for the NeuroAI startup <a href="https://netholabs.com/" target="_blank">Netholabs</a>.
+
+### Doctoral Research Scientist
+
+**Dartmouth College** - Hanover, New Hampshire, USA - 2015 to 2021
+
+PhD in the lab of <a href="http://www.vandermeerlab.org/" target="_blank">Matthijs van der Meer</a>, integrating classical views of the nucleus accumbens as a value- and motivation-centric region with more recent evidence for a role in behavioural flexibility. I began this work at the University of Waterloo in 2013 before moving to Dartmouth in 2015.
+
+* Designed, collected, analysed, and interpreted three primary datasets of extracellular recordings during behaviour in <a href="https://elifesciences.org/articles/37275" target="_blank">freely moving rats</a> and <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001338" target="_blank">head-fixed mice</a>, including building and implanting electrode arrays and acquiring simultaneous behavioural and electrophysiological data.
+
+* Related neural activity to behaviour with cross-validated regression, GLMs, LDA, and demixed PCA, and related oscillatory to spiking activity with spike-field metrics, benchmarking all analyses against shuffled controls.
+
+* Contributed <a href="https://www.jneurosci.org/content/37/33/7962.abstract" target="_blank">local field potential data collection</a> and <a href="https://www.biorxiv.org/content/10.1101/617233v1.abstract" target="_blank">spike-field analysis</a> to two further datasets.
+
+* Mentored undergraduates, led lab sections for a senior systems neuroscience course, and assisted the mouse striatum module of the Marine Biological Laboratory's Neural Systems and Behavior course.
+
+### Research Scientist
+
+**Wilfrid Laurier University** - Waterloo, Ontario, Canada - 2009 to 2013
+
+BSc and MSc research with Bruce McKay, investigating the effects of the abused solvent toluene on neural function and behaviour.
+
+* Designed, collected, analysed, and interpreted data for a <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304394013010835" target="_blank">patch clamp electrophysiology experiment</a>, an <a href="https://www.sciencedirect.com/science/article/abs/pii/S0892036212000542" target="_blank">extracellular electrophysiology experiment</a>, and a <a href="https://journals.lww.com/behaviouralpharm/Abstract/2012/10000/Binge_inhalation_of_toluene_vapor_produces.4.aspx" target="_blank">behavioural pharmacology experiment</a> in rats. 
+
+* Assisted with tissue processing for an <a href="https://www.sciencedirect.com/science/article/abs/pii/S0892036211002066" target="_blank">immediate early gene histology experiment</a>.
+
 # Education
 
 ### PhD in Psychological and Brain Sciences, 2021
@@ -87,74 +145,6 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 **Expertise** - Neural Signal Processing, Predictive Decoding, Latent Variable Analysis
 
-# Professional Experience
-
-### Data Scientist
-
-**Faculty** - London, England, UK - September 2026 to Present
-
-AI Safety.
-
-### Faculty AI Fellowship
-
-**Faculty** - London, England, UK - May 2026 to July 2026
-
-AI Safety Research Fellow. <a href="https://www.youtube.com/watch?v=eYkD0iQb0pc" target="_blank">Developed an automated method to assess coverage of evaluation datasets.</a>
-
-### Postdoctoral Research Scientist
-
-**Imperial College London** - London, England, UK - September 2021 to September 2026
-
-I did postdoctoral work in <a href="https://beneuro.ic.ac.uk/" target="_blank">Juan Gallego's group</a> at Imperial College London, where I was involved in experimental and data science projects related to neural interfaces and the neuroscience of motor control. This work involved:
-
-* Managing the end-to-end lifecycle for multi-modal datasets, and developing Python pipelines for signal processing and extracting low-dimensional latent manifolds from high-dimensional neural data.
-
-* Applying various linear and non-linear approaches to decode behavioural features from neural data and characterizing inter-region communication subspaces.
-
-* Designing and executing experiments to validate novel components of a neural interface.
-
-* Writing a perspective on <a href="https://www.sciencedirect.com/science/article/pii/S0959438824000059" target="_blank">isolating the functional contributions of individual brain regions in motor control</a>.
-
-### Technical Consultant
-
-**Netholabs** - London, England, UK - July 2025 to December 2025
-
-Consultant for the NeuroAI startup <a href="https://netholabs.com/" target="_blank">Netholabs</a>.
-
-### Doctoral Research Scientist
-
-**Dartmouth College** - Hanover, New Hampshire, USA - 2015 to 2021
-
-I completed my PhD at Dartmouth College in the lab of <a href="http://www.vandermeerlab.org/" target="_blank">Matthijs van der Meer</a> where I sought to integrate classical notions of the nucleus accumbens as a value- and motivation-centric region, with more contemporary evidence suggesting a role in certain aspects of behavioural flexibility. I started this work at the University of Waterloo in 2013 before moving to Darmouth in 2015. Some of my work experience includes:
-
-* Designing, collecting, analyzing, and interpreting 3 primary datasets consisting of extracellular electrophysiological recordings during performance of <a href="https://elifesciences.org/articles/37275" target="_blank">freely-moving (rats)</a> or <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001338" target="_blank">head-fixed (mice)</a> behaviours.
-
-* Data collection for various projects involving managing animal colonies, setting up experimental hardware, establishing behavioural tasks, writing Matlab scripts for experiment control, building and implanting electrode arrays, acquiring simultaneous behavioural and electrophysiology data, and performing histology on brain tissue.
-
-* Data processing of various neural datasets in Matlab, including spike sorting, artifact detection in spiking and local field potential data, and filtering local field potentials into frequency bands of interest.
-
-* Cross-validated data analysis of various datasets in Matlab, including relating neural activity to behaviour with <a href="https://elifesciences.org/articles/37275" target="_blank">z-scores, t-tests, linear regressions, GLMs, LDA, </a> <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001338" target="_blank">binomial regressions, and demixed PCA</a>; relating oscillatory activity to spiking activity with spike-field metrics such as <a href="https://www.proquest.com/openview/1178c64cfc02ef12989bee1bfc0953ad/1?pq-origsite=gscholar&cbl=18750&diss=y" target="_blank">spike-triggered spectrum and pairwise-phase consistency</a>; and comparing all analyses to shuffled versions of the data.
-
-* Disseminating research findings to the broader scientific community via writing manuscripts for peer-reviewed publications and presenting posters at professional conferences.
-
-* Assisting in the <a href="https://www.jneurosci.org/content/37/33/7962.abstract" target="_blank">data collection of local field potentials</a> and <a href="https://www.biorxiv.org/content/10.1101/617233v1.abstract" target="_blank">spike-field analysis</a> of 2 other datasets.
-
-* Mentoring undergraduate students on animal behaviour, and on using Matlab for both experimental control and extracting task-related neural activity.
-
-* Leading laboratory sections for a senior undergraduate systems neuroscience course, focusing on understanding neural circuits via sheep brain dissections, and animal behaviour via various behavioural assays.
-
-* Data collection and student training for a pilot experiment integrating extracellular recordings and fiber photometry, as part of assisting the 2019 mouse striatum module of the Marine Biological Laboratory's Neural Systems and Behavior course. 
-
-### Research Scientist
-
-**Wilfrid Laurier University** - Waterloo, Ontario, Canada - 2009 to 2013
-
-I started my research career with <a href="https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/bruce-mckay/index.html" target="_blank">Bruce McKay</a> at Wilfrid Laurier University where I completed my BSc and MSc theses. Here, I investigated the effects of the abused solvent toluene on various aspects of neural function. I was involved in a number of projects, including:
-
-* Designing, collecting, analysing, and interpreting (SPSS, Excel) data for a <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304394013010835" target="_blank">patch clamp electrophysiology experiment</a>, an <a href="https://www.sciencedirect.com/science/article/abs/pii/S0892036212000542" target="_blank">extracellular electrophysiology experiment</a>, and a <a href="https://journals.lww.com/behaviouralpharm/Abstract/2012/10000/Binge_inhalation_of_toluene_vapor_produces.4.aspx" target="_blank">behavioural pharmacology experiment</a> in rats. 
-
-* Assisting tissue processing for an <a href="https://www.sciencedirect.com/science/article/abs/pii/S0892036211002066" target="_blank">immediate early gene histology experiment</a>.
-
 # Publications
 
 See <a href="https://scholar.google.com/citations?hl=en&user=7NL96I4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar profile</a>.
@@ -170,4 +160,4 @@ See <a href="https://scholar.google.com/citations?hl=en&user=7NL96I4AAAAJ&view_o
 
 <hr class="has-background-black" />
 
-Last updated April 2026
+Last updated October 2026
