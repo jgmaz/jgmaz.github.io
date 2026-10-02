@@ -85,9 +85,15 @@ Modulation of synaptic transmission at the perforant path-dentate gyrus synapse.
 
 **Experimental** - Experimental Design, Electrophysiology, Animal Behaviour
 
-**Expertise** - Neural Signal Processing, Predictive Decoding, Latent Variable Analysis, White-Box Methods
+**Expertise** - Neural Signal Processing, Predictive Decoding, Latent Variable Analysis
 
 # Professional Experience
+
+### Data Scientist
+
+**Faculty** - London, England, UK - September 2026 to Present
+
+AI Safety.
 
 ### Faculty AI Fellowship
 
@@ -97,9 +103,9 @@ AI Safety Research Fellow. <a href="https://www.youtube.com/watch?v=eYkD0iQb0pc"
 
 ### Postdoctoral Research Scientist
 
-**Imperial College London** - London, England, UK - September 2021 to Present
+**Imperial College London** - London, England, UK - September 2021 to September 2026
 
-I am currently doing postdoctoral work in <a href="https://beneuro.ic.ac.uk/" target="_blank">Juan Gallego's group</a> at Imperial College London, where I am involved in experimental and data science projects related to neural interfaces, BCIs, and the neuroscience of motor control. This work involves:
+I did postdoctoral work in <a href="https://beneuro.ic.ac.uk/" target="_blank">Juan Gallego's group</a> at Imperial College London, where I was involved in experimental and data science projects related to neural interfaces and the neuroscience of motor control. This work involved:
 
 * Managing the end-to-end lifecycle for multi-modal datasets, and developing Python pipelines for signal processing and extracting low-dimensional latent manifolds from high-dimensional neural data.
 
@@ -108,8 +114,6 @@ I am currently doing postdoctoral work in <a href="https://beneuro.ic.ac.uk/" ta
 * Designing and executing experiments to validate novel components of a neural interface.
 
 * Writing a perspective on <a href="https://www.sciencedirect.com/science/article/pii/S0959438824000059" target="_blank">isolating the functional contributions of individual brain regions in motor control</a>.
-
-* Establishing mouse electrophysiology procedures, and mentoring junior scientists in experimental and data analysis projects.
 
 ### Technical Consultant
 
