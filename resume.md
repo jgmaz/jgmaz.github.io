@@ -76,7 +76,7 @@ PhD in the lab of <a href="http://www.vandermeerlab.org/" target="_blank">Matthi
 
 * Designed, collected, analysed, and interpreted three primary datasets of extracellular recordings during behaviour in <a href="https://elifesciences.org/articles/37275" target="_blank">freely moving rats</a> and <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001338" target="_blank">head-fixed mice</a>, including building and implanting electrode arrays and acquiring simultaneous behavioural and electrophysiological data.
 
-* Related neural activity to behaviour with cross-validated regression, GLMs, LDA, and demixed PCA, and related oscillatory to spiking activity with spike-field metrics, benchmarking all analyses against shuffled controls.
+* Related neural activity to behaviour with various cross-validated analyses, and oscillatory to spiking activity with spike-field metrics.
 
 * Contributed <a href="https://www.jneurosci.org/content/37/33/7962.abstract" target="_blank">local field potential data collection</a> and <a href="https://www.biorxiv.org/content/10.1101/617233v1.abstract" target="_blank">spike-field analysis</a> to two further datasets.
 
@@ -90,7 +90,7 @@ BSc and MSc research with Bruce McKay, investigating the effects of the abused s
 
 * Designed, collected, analysed, and interpreted data for a <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304394013010835" target="_blank">patch clamp electrophysiology experiment</a>, an <a href="https://www.sciencedirect.com/science/article/abs/pii/S0892036212000542" target="_blank">extracellular electrophysiology experiment</a>, and a <a href="https://journals.lww.com/behaviouralpharm/Abstract/2012/10000/Binge_inhalation_of_toluene_vapor_produces.4.aspx" target="_blank">behavioural pharmacology experiment</a> in rats. 
 
-* Assisted with tissue processing for an <a href="https://www.sciencedirect.com/science/article/abs/pii/S0892036211002066" target="_blank">immediate early gene histology experiment</a>.
+* Assisted with an <a href="https://www.sciencedirect.com/science/article/abs/pii/S0892036211002066" target="_blank">immediate early gene histology experiment</a>.
 
 # Education
 
